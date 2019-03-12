@@ -74,8 +74,8 @@ if ( ! function_exists( 'royal_event_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 150,
-			'width'       => 300,
+			'height'      => 100,
+			'width'       => 280,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -122,6 +122,10 @@ add_action( 'widgets_init', 'royal_event_widgets_init' );
 function royal_event_scripts() {
 	wp_enqueue_style( 'royal-event-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), '5.7.2' );
+
+	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/sass/theme.css' );
+
 	wp_enqueue_script( 'royal-event-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'royal-event-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -157,5 +161,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+/**
+ * Connecting short-codes.
+ */
+$shortcodes = glob(get_template_directory() . '/shortcode/*.php');
+
+foreach ($shortcodes as $shortcode) {
+    require $shortcode;
 }
 

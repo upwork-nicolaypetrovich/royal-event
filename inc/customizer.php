@@ -25,6 +25,45 @@ function royal_event_customize_register( $wp_customize ) {
 			'render_callback' => 'royal_event_customize_partial_blogdescription',
 		) );
 	}
+
+	/**
+	 * contacts section
+	 */
+    $wp_customize->add_section(
+        'display-contacts',
+        array(
+            'title'       => 'Contacts',
+            'description' => 'Contacts for display on website',
+            'priority'    => 20,
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'dc-phone',
+        array( 'default' => '000-000-000' )
+    );
+    $wp_customize->add_control(
+        'dc-phone',
+        array(
+            'label'   => 'Phone number',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'dc-email',
+        array( 'default' => 'email@email.com' )
+    );
+    $wp_customize->add_control(
+        'dc-email',
+        array(
+            'label'   => 'email address',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
+
 }
 add_action( 'customize_register', 'royal_event_customize_register' );
 

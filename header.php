@@ -26,6 +26,8 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+			<a href="tel:<?php echo get_theme_mod('dc-phone');?>"><?php echo get_theme_mod('dc-phone');?></a>
+			<a href="mailto:<?php echo get_theme_mod('dc-email');?>"><?php echo get_theme_mod('dc-email');?></a>
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
