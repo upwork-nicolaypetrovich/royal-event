@@ -25,14 +25,14 @@ add_shortcode('custom_title', 'custom_title_func');
 
 // function footag_func_callback(){ echo 'composer'; die;
 //     vc_map( array(
-//         'name' => __('Foo Tag'),
+//         'name' => __('Foo Tag', 'royal-event'),
 //         'base' => 'custom_title',
 //         'class' => '',
-//         'category' => __('Content'),
+//         'category' => __('Content', 'royal-event'),
 //         'params' => array(
 //             array (
 //                 'type' => 'textfield',
-//                 'heading' => __('Foo Tag'),
+//                 'heading' => __('Foo Tag', 'royal-event'),
 //                 'param_name' => 'title',
 //             ),
 //         )

@@ -25,29 +25,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'royal-event' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<a href="tel:<?php echo get_theme_mod('dc-phone');?>"><?php echo get_theme_mod('dc-phone');?></a>
-			<a href="mailto:<?php echo get_theme_mod('dc-email');?>"><?php echo get_theme_mod('dc-email');?></a>
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$royal_event_description = get_bloginfo( 'description', 'display' );
-			if ( $royal_event_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $royal_event_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'royal-event' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<i class="fas fa-bars"></i>
+				<i class="fas fa-times"></i>
+			</button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -55,6 +37,27 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="clear"></div>
+
+		<div class="site-branding">
+			<div>
+				<a href="tel:<?php echo get_theme_mod('dc-phone');?>"><?php echo get_theme_mod('dc-phone');?></a>
+				<br>
+				<a href="mailto:<?php echo get_theme_mod('dc-email');?>"><?php echo get_theme_mod('dc-email');?></a>
+			</div>
+			<div>
+				<?php the_custom_logo(); ?>
+			</div>
+			<div>
+				<a href="/">
+					<i class="fas fa-shopping-cart"></i>
+					<?php echo __( 'your cart', 'royal-event' ); ?>
+					<br>
+					0 <?php echo __( 'items', 'royal-event' ); ?> - $0.00
+				</a>
+			</div>
+		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -43,7 +43,7 @@ function deploy(cb) {
 
 // main watcher
 function watcher(cb){
-    gulp.watch('./sass/theme.sass',
+    gulp.watch(['./sass/theme.sass','./sass/inc/*.sass'],
         { ignoreInitial: false, delay: 100 },
         gulp.series(sassCompiler, deploy)
     );

@@ -1,0 +1,84 @@
+// navigation
+.main-navigation
+    background: $background-color-1
+    display: flex
+    justify-content: center
+
+    // burger styles
+    .menu-toggle
+        border: none
+        background: transparent
+        font-size: 1.5em
+        justify-content: center
+        cursor: pointer
+        color: $font-color-1
+
+        i:last-child
+            display: none
+
+    &.toggled .menu-toggle
+
+        i:first-child
+            display: none
+
+        i:last-child
+            display: block
+
+    // list styles
+    ul
+
+        li
+            padding: 1.4em 0
+            transition: background .5s ease
+
+            a
+                @extend .text-style-1
+                padding: 0 1.7em
+                border-right: 1px solid $border-color-1
+                line-height: 1em
+                transition: color .5s ease, border-color .5s ease
+
+                i
+                    font-size: .8em
+
+        li:hover
+            background: $font-color-1
+
+            a
+                color: $background-color-1
+                border-color: $font-color-1
+
+        li:last-child a
+                border-right: none
+
+
+// mobile adaptation
+@media (max-width: 1048px)
+    
+    .main-navigation
+        flex-direction: column
+
+        ul
+            flex-direction: column
+
+            li a
+                text-align: center
+                border: none
+
+
+
+// branding bar
+.site-branding
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    div
+        text-align: right
+
+        a
+            @extend .text-style-1
+            text-decoration: none
+
+        a:hover
+            text-decoration: underline

@@ -691,10 +691,10 @@ a:hover, a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: flex;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 1049px) {
 	.menu-toggle {
 		display: none;
 	}
