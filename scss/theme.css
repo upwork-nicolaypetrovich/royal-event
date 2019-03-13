@@ -369,4 +369,28 @@ body {
   position: relative;
   top: 12em;
   z-index: 1; }
+
+.re-menu-tiles a {
+  text-decoration: none; }
+.re-menu-tiles a:hover {
+  text-decoration: underline; }
+.re-menu-tiles > .vce-row-content > .vce-col::after {
+  content: '\f107';
+  font-family: "Font Awesome 5 Free";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: #808369;
+  height: 2.5em;
+  background: #f6f4f0;
+  position: absolute;
+  bottom: -1.25em;
+  width: 2.5em;
+  border-radius: 50%;
+  left: calc(50% - 1.25em);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: .3em; }
 /*# sourceMappingURL=theme.css.map */

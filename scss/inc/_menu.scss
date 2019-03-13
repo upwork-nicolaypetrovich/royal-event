@@ -1,0 +1,29 @@
+// menu block on main
+.re-menu-tiles {
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    & > .vce-row-content > .vce-col::after {
+        content: '\f107';
+        font-family: "Font Awesome 5 Free";
+        display: flex;
+        font-weight: bold;
+        color: $font-color-1;
+        height: 2.5em;
+        background: #f6f4f0;
+        position: absolute;
+        bottom: -1.25em;
+        width: 2.5em;
+        border-radius: 50%;
+        left: calc(50% - 1.25em);
+        justify-content: center;
+        padding-top: .3em;
+    }
+
+}
