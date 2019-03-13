@@ -1,0 +1,64 @@
+// ui elements
+
+// buttons
+.re-button-style-1 button,
+a.re-button-style-1 {
+    @extend .text-style-button;
+    width: auto !important;
+    padding: 1.8em 4.5em !important;
+    background: $background-color-2 !important;
+    transition: background .5s ease;
+}
+
+.re-button-style-1 button {
+    letter-spacing: .14em;
+    padding: 1.5em 3.9em !important;
+}
+
+.re-button-style-1 button:hover,
+a.re-button-style-1:hover {
+    background: $hover-color-1 !important;
+}
+
+
+// titles
+.re-title {
+    max-width: 26em;
+    margin: 0 auto 3em;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    span {
+        @extend .text-style-title-1;
+        margin: 0 0 .8em 0;
+        display: block;
+    }
+
+    h4 {
+        @extend .text-style-title-2;
+        margin: 0;
+    }
+
+}
+
+.re-title::after {
+    display: block;
+    content: '';
+    width: 7.4em;
+    height: .14em;
+    background: $border-color-2;
+    margin: 0 auto 0;
+    position: relative;
+    bottom: -2.7em;
+}
+
+.re-title-2 {
+    @extend .re-title;
+
+    span,
+    h4 {
+        color: #fff;
+    }
+
+}

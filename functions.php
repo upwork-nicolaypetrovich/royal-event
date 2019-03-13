@@ -124,7 +124,7 @@ function royal_event_scripts() {
 
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), '5.7.2' );
 
-	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/sass/theme.css' );
+	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/scss/theme.css' );
 
 	wp_enqueue_script( 'royal-event-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

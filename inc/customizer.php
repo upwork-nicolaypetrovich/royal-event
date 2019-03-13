@@ -63,6 +63,58 @@ function royal_event_customize_register( $wp_customize ) {
             'type'    => 'text',
         )
     );
+    
+    $wp_customize->add_setting(
+        'sn-twitter',
+        array( 'default' => '/' )
+    );
+    $wp_customize->add_control(
+        'sn-twitter',
+        array(
+            'label'   => 'Twitter',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'sn-facebook',
+        array( 'default' => '/' )
+    );
+    $wp_customize->add_control(
+        'sn-facebook',
+        array(
+            'label'   => 'Facebook',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'sn-tumblr',
+        array( 'default' => '/' )
+    );
+    $wp_customize->add_control(
+        'sn-tumblr',
+        array(
+            'label'   => 'Tumblr',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'sn-instagram',
+        array( 'default' => '/' )
+    );
+    $wp_customize->add_control(
+        'sn-instagram',
+        array(
+            'label'   => 'Instagram',
+            'section' => 'display-contacts',
+            'type'    => 'text',
+        )
+    );
 
 }
 add_action( 'customize_register', 'royal_event_customize_register' );

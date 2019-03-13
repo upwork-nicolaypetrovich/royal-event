@@ -1,0 +1,191 @@
+// navigation
+.main-navigation {
+    background: $background-color-1;
+    display: flex;
+    justify-content: center;
+
+    // burger styles
+    .menu-toggle {
+        border: none;
+        background: transparent;
+        font-size: 1.5em;
+        justify-content: center;
+        cursor: pointer;
+        color: $font-color-1;
+
+        i:last-child {
+            display: none;
+        }
+
+    }
+
+    &.toggled .menu-toggle {
+
+        i:first-child {
+            display: none;
+        }
+
+        i:last-child {
+            display: block;
+        }
+
+    }
+
+    // list styles
+    ul {
+
+        li {
+            padding: 1.4em 0;
+            transition: background .5s ease;
+
+            a {
+                @extend .text-style-1;
+                padding: 0 1.7em;
+                border-right: 1px solid $border-color-1;
+                line-height: 1em;
+                transition: color .5s ease, border-color .5s ease;
+
+                i {
+                    font-size: .8em;
+                }
+
+            }
+
+        }
+
+        li:hover {
+            background: $font-color-1;
+
+            a {
+                color: $background-color-1;
+                border-color: $font-color-1;
+            }
+
+        }
+
+        li:last-child a {
+                border-right: none;
+        }
+
+    }
+
+}
+
+
+// navigation mobile adaptation
+@media (max-width: 1048px) {
+    
+    .main-navigation {
+        flex-direction: column;
+
+        ul {
+            flex-direction: column;
+
+            li a {
+                text-align: center;
+                border: none;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+// branding bar
+.site-branding {
+    display: flex;
+    justify-content: space-around;
+    margin: 3em auto -1.6em auto;
+    max-width: 92em;
+
+    div {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            @extend .text-style-1;
+            text-decoration: none;
+
+            .fa-phone {
+                font-size: .8em;
+                transform: rotate(90deg);
+                margin-right: .5em;
+            }
+
+            .fa-shopping-cart {
+                font-size: .8em;
+                margin-right: .5em;
+            }
+
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+    .site-branding__contacts {
+        margin-top: .6em;
+    }
+
+    .site-branding__logo {
+        position: relative;
+        z-index: 5;
+
+        .custom-logo-link {
+            position: relative;
+            z-index: 2;
+        }
+
+        .site-branding__circle {
+            width: 14.9em;
+            height: 7em;
+            background: $website-background;
+            border-radius: 0 0 8em 8em;
+            left: calc(50% - 7.8em);
+            position: absolute;
+            top: 2.7em;
+            z-index: 1;
+        }
+
+    }
+
+    .site-branding__cart {
+        margin-top: .6em;
+           
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+}
+
+
+// branding bar mobile adaptation
+@media (max-width: 720px) {
+    
+    .site-branding {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+
+        div {
+            margin: 1em 0;
+            text-align: center;
+
+            .site-branding__circle {
+                display: none;
+            }
+
+        }
+
+    }
+
+}

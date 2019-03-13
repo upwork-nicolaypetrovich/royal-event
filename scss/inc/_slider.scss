@@ -1,0 +1,65 @@
+// main slider in header
+%re-slider-pseudo {
+    display: block;
+    content: '';
+    width: 14%;
+    height: .04em;
+    background: white;
+}
+
+
+// slider elements
+.re-main-slider {
+
+    .re-slider-title {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: PT serif, serif;
+        font-size: 4em;
+        line-height: 1em !important;
+        text-align: center;
+        letter-spacing: .13em;
+        margin-bottom: 1em !important;
+    }
+
+    .re-slider-title::after {
+        @extend %re-slider-pseudo;
+        margin: .8em auto 0;
+    }
+
+    .re-slider-title::before {
+        @extend %re-slider-pseudo;
+        margin: 0 auto .8em;
+    }
+
+}
+
+
+// slider elements positioning
+.re-main-slider {
+
+    .ms-anim-layers {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        div {
+            position: initial !important;
+        }
+
+    }
+
+    .ms-skin-light-6 .ms-bullet {
+        background: white !important;
+        border-color: rgba(255, 255, 255, 0) !important;
+        -webkit-background-clip: padding-box !important;
+    }
+
+    .ms-skin-light-6 .ms-bullet-selected {
+        border-color: rgba(0, 0, 0, 0.44) !important;
+    }
+
+}

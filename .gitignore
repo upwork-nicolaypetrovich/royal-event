@@ -13,3 +13,5 @@ sftp-config.json
 
 # project
 node_modules
+.gulp-scss-cache
+.sass-cache
