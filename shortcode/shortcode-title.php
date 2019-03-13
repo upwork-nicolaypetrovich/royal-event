@@ -7,7 +7,10 @@
 
 function custom_title_func( $atts ){
 
-    $str = '<div class="re-title" style="background-image: url('.get_template_directory_uri().'/img/tbg1o.png)">';
+    $light = '';
+    if (isset($atts['light'])) $light = '-2';
+
+    $str = '<div class="re-title'.$light.'" style="background-image: url('.get_template_directory_uri().'/img/tbg1o'.$light.'.png)">';
 
     if( isset($atts['sub']) ){
         $str .= '<span>'.$atts['sub'].'</span>';
