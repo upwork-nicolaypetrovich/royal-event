@@ -9,6 +9,7 @@ function custom_title_func( $atts ){
 
     $light = '';
     if (isset($atts['light'])) $light = '-2';
+    else if (isset($atts['big'])) $light = '-3';
 
     $str = '<div class="re-title'.$light.'" style="background-image: url('.get_template_directory_uri().'/img/tbg1o'.$light.'.png)">';
 

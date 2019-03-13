@@ -9,13 +9,13 @@
   font-family: PT serif, serif;
   font-size: .9em; }
 
-.text-style-title-1, .re-title span, .re-title-2 span {
+.text-style-title-1, .re-title span, .re-title-2 span, .re-title-3 span {
   color: #808369;
   text-transform: uppercase;
   font-family: PT serif, serif;
   letter-spacing: .08em; }
 
-.text-style-title-2, .re-title h4, .re-title-2 h4 {
+.text-style-title-2, .re-title h4, .re-title-2 h4, .re-title-3 h4 {
   color: #434343;
   font-family: PT serif, serif;
   letter-spacing: .06em;
@@ -47,19 +47,19 @@ a.re-button-style-1 {
 a.re-button-style-1:hover {
   background: #e78a61 !important; }
 
-.re-title, .re-title-2 {
+.re-title, .re-title-2, .re-title-3 {
   max-width: 26em;
   margin: 0 auto 3em;
   text-align: center;
   background-repeat: no-repeat;
   background-position: center; }
-  .re-title span, .re-title-2 span {
+  .re-title span, .re-title-2 span, .re-title-3 span {
     margin: 0 0 .8em 0;
     display: block; }
-  .re-title h4, .re-title-2 h4 {
+  .re-title h4, .re-title-2 h4, .re-title-3 h4 {
     margin: 0; }
 
-.re-title::after, .re-title-2::after {
+.re-title::after, .re-title-2::after, .re-title-3::after {
   display: block;
   content: '';
   width: 7.4em;
@@ -69,9 +69,18 @@ a.re-button-style-1:hover {
   position: relative;
   bottom: -2.7em; }
 
-.re-title-2 span,
-.re-title-2 h4 {
+.re-title-2 span, .re-title-3 span,
+.re-title-2 h4,
+.re-title-3 h4 {
   color: #fff; }
+
+.re-title-3 {
+  max-width: 44em; }
+  .re-title-3 h4 {
+    font-size: 3.1em; }
+
+.re-title-3::after {
+  background: #fff; }
 
 body {
   font-size: 15px; }
@@ -393,4 +402,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   padding-top: .3em; }
+
+.re-book .vce-content-background-container {
+  opacity: .4; }
 /*# sourceMappingURL=theme.css.map */

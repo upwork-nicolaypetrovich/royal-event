@@ -53,6 +53,7 @@ a.re-button-style-1:hover {
     bottom: -2.7em;
 }
 
+
 .re-title-2 {
     @extend .re-title;
 
@@ -61,4 +62,19 @@ a.re-button-style-1:hover {
         color: #fff;
     }
 
+}
+
+
+.re-title-3 {
+    @extend .re-title-2;
+    max-width: 44em;
+
+    h4 {
+        font-size: 3.1em;
+    }
+
+}
+
+.re-title-3::after {
+    background: #fff;
 }
