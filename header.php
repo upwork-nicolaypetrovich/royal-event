@@ -41,20 +41,23 @@
 		<div class="clear"></div>
 
 		<div class="site-branding">
-			<div>
-				<a href="tel:<?php echo get_theme_mod('dc-phone');?>"><?php echo get_theme_mod('dc-phone');?></a>
-				<br>
+			<div class="site-branding__contacts">
+				<a href="tel:<?php echo get_theme_mod('dc-phone');?>"><i class="fas fa-phone"></i><?php echo get_theme_mod('dc-phone');?></a>
 				<a href="mailto:<?php echo get_theme_mod('dc-email');?>"><?php echo get_theme_mod('dc-email');?></a>
 			</div>
-			<div>
+			<div class="site-branding__logo">
 				<?php the_custom_logo(); ?>
+				<div class="site-branding__circle"></div>
 			</div>
-			<div>
+			<div class="site-branding__cart">
 				<a href="/">
-					<i class="fas fa-shopping-cart"></i>
-					<?php echo __( 'your cart', 'royal-event' ); ?>
-					<br>
-					0 <?php echo __( 'items', 'royal-event' ); ?> - $0.00
+					<span>
+						<i class="fas fa-shopping-cart"></i>
+						<?php echo __( 'your cart', 'royal-event' ); ?> :
+					</span>
+					<span>
+						0 <?php echo __( 'items', 'royal-event' ); ?> - $0.00
+					</span>
 				</a>
 			</div>
 		</div><!-- .site-branding -->

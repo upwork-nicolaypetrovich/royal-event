@@ -1,0 +1,44 @@
+// welcome tile on main page
+.re-welcome-tile
+
+    .vce-content-background-container
+        opacity: .6
+        transition: opacity 1s ease
+
+    .vce-text-block-wrapper
+        font-family: 'Yellowtail', cursive
+        color: #fff
+        font-size: 3em
+        min-height: 9.3em
+        display: flex
+        justify-content: center
+        align-items: center
+
+        a
+            color: inherit
+            text-decoration: none
+
+.re-welcome-tile:hover
+
+    .vce-content-background-container
+        opacity: 1
+
+.re-welcome-tile::after
+    content: '\f107'
+    font-family: "Font Awesome 5 Free";
+    display: flex
+    font-weight: bold
+    color: $font-color-1
+    height: 5.8em
+    background: white
+    position: absolute
+    bottom: -3.5em
+    width: 5.8em
+    border-radius: 50%
+    left: calc(50% - 2.9em)
+    justify-content: center
+    padding-top: 1.3em
+
+@media (max-width: 768px)
+    .re-welcome-tile::after
+        display: none
