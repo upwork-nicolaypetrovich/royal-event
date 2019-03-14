@@ -1,0 +1,110 @@
+// events list on main page
+.re-events-container {
+    display: flex;
+    max-width: 77em;
+    margin: 0 auto;
+    justify-content: center;
+
+    .re-events__list-column {
+
+        .re-events__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            & > li {
+                display: flex;
+                margin-bottom: 3em;
+
+                .re-events__text {
+                    text-align: right;
+                    max-width: 18em;
+
+                    .re-events__title {
+                        @extend .text-style-3;
+                        margin: 0 0 2.4em 0;
+                    }
+
+                    .re-events__title::after {
+                        display: block;
+                        content: '';
+                        width: 6.2em;
+                        height: .11em;
+                        background: #a7a99a;
+                        margin: 0 0 0 auto;
+                        position: relative;
+                        bottom: -0.8em;
+                    }
+
+                    .re-events__description {
+                        @extend .text-style-2;
+                        margin: 0;
+                    }
+
+                }
+
+                .re-events__number {
+                    color: #eae7e0;
+                    font-family: PT serif, serif;
+                    font-size: 2.8em;
+                    width: 1.8em;
+                    text-align: center;
+                    line-height: 1em;
+                }
+
+            }
+            
+        }
+
+    }
+
+    .re-events__list-column_2nd-column {
+
+        .re-events__list > li {
+            flex-direction: row-reverse;
+
+            .re-events__text {
+                text-align: left;
+
+                .re-events__title::after {
+                    margin: 0 auto 0 0;
+                }
+            }
+
+        }
+
+    }
+
+    .re-events__image-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1em;
+
+        img {
+            border-radius: 50%;
+        }
+
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .re-events-container .re-events__image-column {
+        display: none;
+    }
+
+}
+
+@media (max-width: 540px) {
+
+    .re-events-container {
+        flex-direction: column;
+
+        li {
+            justify-content: center;
+        }
+    }
+
+}

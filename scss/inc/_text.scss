@@ -12,6 +12,11 @@
     font-size: .9em;
 }
 
+.text-style-3 {
+    @extend .text-style-1;
+    font-size: 1.2em
+}
+
 .text-style-title-1 {
     color: $font-color-1;
     text-transform: uppercase;
