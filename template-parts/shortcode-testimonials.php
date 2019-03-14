@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying events list in events shortcode
+ * Template part for displaying testimonials slider in events shortcode
  *
  * @package Royal_Event
  */

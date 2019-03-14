@@ -144,6 +144,7 @@ add_action( 'wp_enqueue_scripts', 'royal_event_scripts' );
  * Registering image dimensions.
  */
 add_image_size( 'testimonial', 96, 96, true );
+add_image_size( 'team', 242, 242, true );
 
 /**
  * Implement the Custom Header feature.

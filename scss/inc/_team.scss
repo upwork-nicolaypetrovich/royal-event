@@ -1,0 +1,37 @@
+// team block on main page
+.team-tiles__container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 79em;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .team-tiles__tile {
+        margin: 1em;
+
+        .team-tiles__photo-container {
+            margin-bottom: 2.1em;
+
+            img {
+                border-radius: 50%;
+            }
+
+        }
+
+        .team-tiles__text-container {
+
+            .team-tiles__name {
+                @extend .text-style-4;
+                margin-bottom: .5em;
+            }
+
+            .team-tiles__text {
+                @extend .text-style-5;
+            }
+
+        }
+
+    }
+
+}

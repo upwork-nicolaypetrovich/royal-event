@@ -102,3 +102,22 @@ a.re-button-style-1:hover {
     position: relative;
     bottom: -0.5em;
 }
+
+
+// quote
+.re-quote {
+    position: relative;
+}
+
+.re-quote::before {
+    display: block;
+    content: '“';
+    font-family: PT serif, serif;
+    color: #808369;
+    font-size: 13em;
+    opacity: .2;
+    position: absolute;
+    line-height: 1em;
+    top: -0.1em;
+    left: -0.07em;
+}

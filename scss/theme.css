@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .text-style-1, .text-style-3, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__title, .main-navigation ul li a, .site-branding div a, .site-branding__footer div a, .site-branding__footer .site-branding__address span {
   color: #808369;
   text-transform: uppercase;
@@ -12,13 +13,13 @@
 .text-style-3, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__title {
   font-size: 1.2em; }
 
-.text-style-4, .testimonials-slider__container .testimonials-slider__slide .testimonials-slider__text-container .testimonials-slider__text {
+.text-style-4, .testimonials-slider__container .testimonials-slider__slide .testimonials-slider__text-container .testimonials-slider__text, .team-tiles__container .team-tiles__tile .team-tiles__text-container .team-tiles__name {
   color: #808369;
   font-family: PT serif, serif;
   font-size: 1.3em;
   letter-spacing: .06em; }
 
-.text-style-5, .testimonials-slider__container .testimonials-slider__slide .testimonials-slider__text-container .testimonials-slider__name {
+.text-style-5, .testimonials-slider__container .testimonials-slider__slide .testimonials-slider__text-container .testimonials-slider__name, .team-tiles__container .team-tiles__tile .team-tiles__text-container .team-tiles__text {
   font-family: PT serif, serif;
   color: #929292;
   text-transform: initial;
@@ -116,6 +117,21 @@ a.re-button-style-1:hover {
   margin: 0;
   position: relative;
   bottom: -0.5em; }
+
+.re-quote {
+  position: relative; }
+
+.re-quote::before {
+  display: block;
+  content: '“';
+  font-family: PT serif, serif;
+  color: #808369;
+  font-size: 13em;
+  opacity: .2;
+  position: absolute;
+  line-height: 1em;
+  top: -0.1em;
+  left: -0.07em; }
 
 body {
   font-size: 15px; }
@@ -569,4 +585,24 @@ body {
       text-align: center;
       background: #f5f5f3;
       padding: 2em 0; }
+
+.team-tiles__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  text-align: center;
+  max-width: 79em;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .team-tiles__container .team-tiles__tile {
+    margin: 1em; }
+    .team-tiles__container .team-tiles__tile .team-tiles__photo-container {
+      margin-bottom: 2.1em; }
+      .team-tiles__container .team-tiles__tile .team-tiles__photo-container img {
+        border-radius: 50%; }
+    .team-tiles__container .team-tiles__tile .team-tiles__text-container .team-tiles__name {
+      margin-bottom: .5em; }
 /*# sourceMappingURL=theme.css.map */
