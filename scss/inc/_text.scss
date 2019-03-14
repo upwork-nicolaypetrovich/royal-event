@@ -17,6 +17,20 @@
     font-size: 1.2em
 }
 
+.text-style-4 {
+    color: $font-color-1;
+    font-family: PT serif, serif;
+    font-size: 1.3em;
+    letter-spacing: .06em;
+}
+
+.text-style-5 {
+    font-family: PT serif, serif;
+    color: $font-color-3;
+    text-transform: initial;
+    font-size: .9em;
+}
+
 .text-style-title-1 {
     color: $font-color-1;
     text-transform: uppercase;

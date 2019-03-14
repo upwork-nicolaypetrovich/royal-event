@@ -124,17 +124,26 @@ function royal_event_scripts() {
 
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), '5.7.2' );
 
+	wp_enqueue_style( 'slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', array(), '1.9.0' );
+
 	wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/scss/theme.css' );
 
 	wp_enqueue_script( 'royal-event-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'royal-event-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'slick-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('jquery'), '1.9.0', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'royal_event_scripts' );
+
+/**
+ * Registering image dimensions.
+ */
+add_image_size( 'testimonial', 96, 96, true );
 
 /**
  * Implement the Custom Header feature.

@@ -7,43 +7,46 @@
 
 ?>
 
-<?php $events = new WP_Query( array( 'post_type' => 'event', 'posts_per_page'=> 6 ) ); ?>
-<?php if ( $events->have_posts() ) { ?>
+<?php $testimonials = new WP_Query( array( 'post_type' => 'testimonial', 'posts_per_page'=> 6 ) ); ?>
+<?php if ( $testimonials->have_posts() ) { ?>
 
-<div class="re-events-container">
+<div class="testimonials-slider__container">
 
-    <div class="re-events__list-column re-events__list-column_1st-column">
-        <ul class="re-events__list">
-            <?php $i = 1; while ( $events->have_posts() && $i < 4 ) { $events->the_post(); ?>
-                <li>
-                    <div class="re-events__text">
-                        <p class="re-events__title"><?php echo get_the_title(); ?></p>
-                        <p class="re-events__description"><?php echo mb_substr( strip_tags( get_the_content() ), 0, 80); ?></p>
+    <div class="testimonials-slider__left" onclick="jQuery('.testimonials-slider__container .slick-prev').trigger('click');"><i class="fas fa-angle-left"></i></div>
+
+    <div class="testimonials-slider">
+
+        <?php while ( $testimonials->have_posts() ) { $testimonials->the_post(); ?>
+            <div class="testimonials-slider__slide">
+                <div class="testimonials-slider__photo-container">
+                    <?php echo the_post_thumbnail('testimonial'); ?>
+                </div>
+                <div class="testimonials-slider__text-container">
+                    <div class="testimonials-slider__text">
+                        <?php echo strip_tags( get_the_content() ); ?>
                     </div>
-                    <div class="re-events__number">0<?php echo $i; ?></div>
-                </li>
-            <?php $i++; } ?>
-        </ul>
-    </div>
-
-    <div class="re-events__image-column">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/ev.png" width="430" height="430" alt="Events Thumb">
-    </div>
-
-    <div class="re-events__list-column re-events__list-column_2nd-column">
-        <ul class="re-events__list">
-            <?php while ( $events->have_posts() && $i > 3 ) { $events->the_post(); ?>
-                <li>
-                    <div class="re-events__text">
-                        <p class="re-events__title"><?php echo get_the_title(); ?></p>
-                        <p class="re-events__description"><?php echo mb_substr( strip_tags( get_the_content() ), 0, 80); ?></p>
+                    <div class="testimonials-slider__name">
+                        <?php echo get_the_title(); ?>
                     </div>
-                    <div class="re-events__number">0<?php echo $i; ?></div>
-                </li>
-            <?php $i++; } ?>
-        </ul>
+                </div>
+            </div>
+        <?php } ?>
+
     </div>
+
+    <div class="testimonials-slider__right" onclick="jQuery('.testimonials-slider__container .slick-next').trigger('click');"><i class="fas fa-angle-right"></i></div>
 
 </div>
+
+<script>
+    window.onload = function() {
+        jQuery('.testimonials-slider').slick({
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+        });
+    };
+</script>
 
 <?php } wp_reset_postdata(); ?>
