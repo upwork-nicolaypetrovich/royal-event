@@ -78,3 +78,16 @@ a.re-button-style-1:hover {
 .re-title-3::after {
     background: #fff;
 }
+
+
+// underline
+.re-hr::after {
+    display: block;
+    content: '';
+    width: 7.4em;
+    height: .1em;
+    background: #a7a99a;
+    margin: 0 auto 0;
+    position: relative;
+    bottom: 0.5em;
+}
