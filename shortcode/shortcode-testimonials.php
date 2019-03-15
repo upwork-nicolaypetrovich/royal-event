@@ -1,6 +1,6 @@
 <?php
 /**
- * testimonials view short-code
+ * Testimonials view short-code
  *
  * @package Royal_Event
  */

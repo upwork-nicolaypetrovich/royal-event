@@ -1,6 +1,6 @@
 <?php
 /**
- * team view short-code
+ * Team view short-code
  *
  * @package Royal_Event
  */

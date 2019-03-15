@@ -1,6 +1,6 @@
 <?php
 /**
- * events view short-code
+ * Events view short-code
  *
  * @package Royal_Event
  */
