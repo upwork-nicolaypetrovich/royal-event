@@ -54,6 +54,10 @@
         border: none;
         border-radius: 0;
         cursor: pointer;
+
+        .ajax-loader {
+            display: none;
+        }
     }
 
     .wpcf7-response-output {

@@ -8,6 +8,8 @@ a.re-button-style-1 {
     width: auto !important;
     padding: 1.8em 4.5em !important;
     background: $background-color-2 !important;
+    border: none !important;
+    border-radius: none !important;
     transition: background .5s ease;
 }
 
@@ -122,4 +124,24 @@ a.re-button-style-1:hover {
     line-height: 1em;
     top: -0.1em;
     left: -0.07em;
+}
+
+// pulse animation
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(128, 131, 105, .4);
+    }
+    70% {
+        box-shadow: 0 0 0 1em rgba(128, 131, 105, 0);
+    }
+}
+
+// scale animation
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
 }

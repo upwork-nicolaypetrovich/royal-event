@@ -105,6 +105,7 @@
         text-align: right;
         display: flex;
         flex-direction: column;
+        min-width: 12em;
 
         a {
             @extend .text-style-1;
