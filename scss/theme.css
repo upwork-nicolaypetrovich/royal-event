@@ -54,7 +54,7 @@ a.re-button-style-1 {
   padding: 1.8em 4.5em !important;
   background: #ffb18b !important;
   border: none !important;
-  border-radius: none !important;
+  border-radius: 0;
   -webkit-transition: background .5s ease;
   -o-transition: background .5s ease;
   transition: background .5s ease; }
@@ -64,9 +64,10 @@ a.re-button-style-1 {
   padding: 1.5em 3.9em !important; }
 
 .re-button-style-1 button:hover,
-.re-button-style-1 input[type="submit"],
+.re-button-style-1 input[type="submit"]:hover,
 a.re-button-style-1:hover {
-  background: #e78a61 !important; }
+  background: #e78a61 !important;
+  cursor: pointer; }
 
 .re-title, .re-title-2, .re-title-3 {
   max-width: 26em;
@@ -167,6 +168,20 @@ a.re-button-style-1:hover {
   50% {
     -webkit-transform: scale(1.03);
     transform: scale(1.03); } }
+@-webkit-keyframes jump {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+  40% {
+    -webkit-transform: translate3d(0, 1%, 0) scale3d(1, 1.1, 1);
+    transform: translate3d(0, 1%, 0) scale3d(1, 1.1, 1); } }
+@keyframes jump {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+  40% {
+    -webkit-transform: translate3d(0, 1%, 0) scale3d(1, 1.1, 1);
+    transform: translate3d(0, 1%, 0) scale3d(1, 1.1, 1); } }
 body {
   font-size: 15px; }
 
@@ -389,7 +404,7 @@ body {
       -o-transition: background .5s ease;
       transition: background .5s ease; }
     .site-footer__socials ul li a:hover {
-      background: #f6f4f0; }
+      background: #e78a61; }
 
 .site-footer__copy {
   padding: 0 1em;
@@ -499,7 +514,7 @@ body {
   margin-bottom: -6em; }
 .re-about .re-about-shift {
   position: relative;
-  top: 12em;
+  top: 10em;
   z-index: 1; }
 
 .re-menu-tiles a {
@@ -698,11 +713,20 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1; }
   .projects-tiles__container .projects-tiles__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     margin: 1em;
     height: 24em;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important; }
+  .projects-tiles__container .projects-tiles__img:hover {
+    -webkit-animation: jump 1s linear alternate infinite;
+    animation: jump 1s linear alternate infinite; }
   .projects-tiles__container .projects-tiles__l11 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

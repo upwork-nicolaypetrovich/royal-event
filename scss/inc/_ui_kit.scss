@@ -9,7 +9,7 @@ a.re-button-style-1 {
     padding: 1.8em 4.5em !important;
     background: $background-color-2 !important;
     border: none !important;
-    border-radius: none !important;
+    border-radius: 0;
     transition: background .5s ease;
 }
 
@@ -19,9 +19,10 @@ a.re-button-style-1 {
 }
 
 .re-button-style-1 button:hover,
-.re-button-style-1 input[type="submit"],
+.re-button-style-1 input[type="submit"]:hover,
 a.re-button-style-1:hover {
     background: $hover-color-1 !important;
+    cursor: pointer;
 }
 
 
@@ -143,5 +144,15 @@ a.re-button-style-1:hover {
     }
     50% {
         transform: scale(1.03);
+    }
+}
+
+// jump animation
+@keyframes jump {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+    40% {
+        transform: translate3d(0, 1%, 0) scale3d(1, 1.1, 1);
     }
 }

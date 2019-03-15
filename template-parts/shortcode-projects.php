@@ -20,15 +20,15 @@ while ( $projects->have_posts() ) {
 <div class="projects-tiles__container">
     <div class="projects-tiles__l11">
         <div class="projects-tiles__l21">
-            <div class="projects-tiles__l31 projects-tiles__img" style="background: url(<?php echo $tiles[0]; ?>)"></div>
-            <div class="projects-tiles__l32 projects-tiles__img" style="background: url(<?php echo $tiles[1]; ?>)"></div>
+            <a href="/" class="projects-tiles__l31 projects-tiles__img" style="background: url(<?php echo $tiles[0]; ?>)"></a>
+            <a href="/" class="projects-tiles__l32 projects-tiles__img" style="background: url(<?php echo $tiles[1]; ?>)"></a>
         </div>
         <div class="projects-tiles__l22">
-            <div class="projects-tiles__l33 projects-tiles__img" style="background: url(<?php echo $tiles[2]; ?>)"></div>
-            <div class="projects-tiles__l34 projects-tiles__img" style="background: url(<?php echo $tiles[3]; ?>)"></div>
+            <a href="/" class="projects-tiles__l33 projects-tiles__img" style="background: url(<?php echo $tiles[2]; ?>)"></a>
+            <a href="/" class="projects-tiles__l34 projects-tiles__img" style="background: url(<?php echo $tiles[3]; ?>)"></a>
         </div>
     </div>
-    <div class="projects-tiles__l12 projects-tiles__img" style="background: url(<?php echo $tiles[4]; ?>)"></div>
+    <a href="/" class="projects-tiles__l12 projects-tiles__img" style="background: url(<?php echo $tiles[4]; ?>)"></a>
 </div>
 
 <?php } wp_reset_postdata(); ?>

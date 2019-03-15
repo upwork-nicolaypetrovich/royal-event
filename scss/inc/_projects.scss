@@ -10,11 +10,17 @@
     }
 
     .projects-tiles__img {
+        display: flex;
+        flex-grow: 1;
         margin: 1em;
         height: 24em;
         background-repeat: no-repeat !important;
         background-size: cover !important;
         background-position: center !important;
+    }
+
+    .projects-tiles__img:hover {
+        animation: jump 1s linear alternate infinite;
     }
 
     .projects-tiles__l11 {
