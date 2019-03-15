@@ -13,6 +13,15 @@
 
 	</div><!-- #content -->
 
+
+	<div class="re-up-button-container">
+		<a href="#top" onclick='jQuery("html, body").animate({ scrollTop: 0 }, "slow"); return false;'>
+			<span><i class="fas fa-angle-up"></i></span>
+			<span>Top</span>
+		</a>
+	</div><!-- #to top button -->
+
+
 	<footer id="colophon" class="site-footer">
 
 		<div class="site-branding__footer">

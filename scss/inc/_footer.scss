@@ -1,5 +1,40 @@
 // footer styles
 
+// to top button
+.re-up-button-container {
+    position: relative;
+
+    a {
+        display: flex;
+        color: #808369;
+        height: 7.8em;
+        background: white;
+        position: absolute;
+        bottom: -3.5em;
+        width: 7.8em;
+        border-radius: 50%;
+        left: calc(50% - 3.9em);
+        justify-content: flex-start;
+        text-decoration: none;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.3em;
+
+        span {
+            @extend .text-style-2;
+            text-transform: uppercase;
+
+            i {
+
+            }
+
+        }
+
+    }
+
+}
+
+
 // branding bar
 .site-branding__footer {
     @extend .site-branding;

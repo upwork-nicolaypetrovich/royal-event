@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.text-style-1, .text-style-3, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__title, .main-navigation ul li a, .site-branding div a, .site-branding__footer div a, .site-branding__footer .site-branding__address span {
+.text-style-1, .text-style-3, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__title, .main-navigation ul li a, .site-branding div a, .site-branding__footer div a, .site-branding__footer .site-branding__address span, .re-contact-form form .re-contact-form__inputs .re-contact-form__email input, .re-contact-form form .re-contact-form__inputs .re-contact-form__name input, .re-contact-form form .re-contact-form__message textarea {
   color: #808369;
   text-transform: uppercase;
   font-family: PT serif, serif;
   letter-spacing: .08em; }
 
-.text-style-2, .site-footer__copy, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__description {
+.text-style-2, .re-up-button-container a span, .site-footer__copy, .re-events-container .re-events__list-column .re-events__list > li .re-events__text .re-events__description, .re-contact-form form .wpcf7-response-output {
   color: #929292;
   font-family: PT serif, serif;
   font-size: .9em; }
@@ -39,6 +39,7 @@
   line-height: 1.35em; }
 
 .text-style-button, .re-button-style-1 button,
+.re-button-style-1 input[type="submit"],
 a.re-button-style-1 {
   color: #fff !important;
   text-transform: uppercase;
@@ -47,6 +48,7 @@ a.re-button-style-1 {
   font-size: 14px !important; }
 
 .re-button-style-1 button,
+.re-button-style-1 input[type="submit"],
 a.re-button-style-1 {
   width: auto !important;
   padding: 1.8em 4.5em !important;
@@ -60,6 +62,7 @@ a.re-button-style-1 {
   padding: 1.5em 3.9em !important; }
 
 .re-button-style-1 button:hover,
+.re-button-style-1 input[type="submit"],
 a.re-button-style-1:hover {
   background: #e78a61 !important; }
 
@@ -271,6 +274,35 @@ body {
       text-align: center; }
       .site-branding div .site-branding__circle, .site-branding__footer div .site-branding__circle {
         display: none; } }
+.re-up-button-container {
+  position: relative; }
+  .re-up-button-container a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #808369;
+    height: 7.8em;
+    background: white;
+    position: absolute;
+    bottom: -3.5em;
+    width: 7.8em;
+    border-radius: 50%;
+    left: calc(50% - 3.9em);
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    text-decoration: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 1.3em; }
+    .re-up-button-container a span {
+      text-transform: uppercase; }
+
 .site-branding__footer {
   max-width: 56em;
   margin-top: 6.3em;
@@ -651,4 +683,48 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
+.re-contact-form form .re-contact-form__inputs .re-contact-form__email input, .re-contact-form form .re-contact-form__inputs .re-contact-form__name input, .re-contact-form form .re-contact-form__message textarea {
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  padding: 1.2em 2.8em;
+  width: 100%; }
+
+.re-contact-form form {
+  max-width: 54em;
+  margin: 0 auto;
+  padding: 0 1em; }
+  .re-contact-form form .re-contact-form__inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2em; }
+    .re-contact-form form .re-contact-form__inputs .re-contact-form__email, .re-contact-form form .re-contact-form__inputs .re-contact-form__name {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; }
+    .re-contact-form form .re-contact-form__inputs .re-contact-form__name {
+      margin-right: 2em; }
+  .re-contact-form form .re-contact-form__message {
+    margin-bottom: 3.4em; }
+  .re-contact-form form .re-button-style-1 {
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    cursor: pointer; }
+  .re-contact-form form .wpcf7-response-output {
+    border: none;
+    background: #fff;
+    padding: 1em;
+    text-align: center; }
+
+@media (max-width: 680px) {
+  .re-contact-form form .re-contact-form__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .re-contact-form form .re-contact-form__inputs .re-contact-form__name {
+      margin-right: 0;
+      margin-bottom: 2em; } }
 /*# sourceMappingURL=theme.css.map */

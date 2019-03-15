@@ -1,0 +1,87 @@
+// contact form styles
+%re-contact-form__input-style {
+    @extend .text-style-1;
+    border: none;
+    border-radius: 0;
+    background: #fff;
+    padding: 1.2em 2.8em;
+    width: 100%
+}
+
+.re-contact-form form {
+    max-width: 54em;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    .re-contact-form__inputs {
+        display: flex;
+        margin-bottom: 2em;
+
+
+        .re-contact-form__email {
+            flex-grow: 1;
+
+            input {
+                @extend %re-contact-form__input-style;
+            }
+
+        }
+
+        .re-contact-form__name {
+            @extend .re-contact-form__email;
+            margin-right: 2em;
+            
+            input {
+
+            }
+
+        }
+
+    }
+
+
+    .re-contact-form__message {
+        margin-bottom: 3.4em;
+        
+        textarea {
+            @extend %re-contact-form__input-style;
+        }
+
+    }
+
+    .re-button-style-1 {
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .wpcf7-response-output {
+        @extend .text-style-2;
+        border: none;
+        background: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+}
+
+
+// mobile adaptation
+@media (max-width: 680px) {
+
+    .re-contact-form form {
+
+        .re-contact-form__inputs {
+            flex-direction: column;
+
+            .re-contact-form__name {
+                margin-right: 0;
+                margin-bottom: 2em;
+            }
+
+        }
+
+    }
+
+}
